@@ -13,7 +13,7 @@ const Hero = () => {
       title: "Step Into Style",
       subtitle: "Discover the Latest Collection",
       description: "Find your perfect pair from our curated selection of premium footwear",
-      image: "/images/hero-slide-1.jpg",
+      image: "/images/hero-slide-1.avif",
       buttonText: "Shop Now",
       buttonLink: "/category/running",
       accent: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)"
