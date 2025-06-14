@@ -8,7 +8,7 @@ import './Cart.css';
 
 const Cart = () => {
   const { items, removeFromCart, updateQuantity, getCartTotal, clearCart } = useCart();
-  const { success, info } = useToast();
+  const { info } = useToast();
 
   const handleQuantityChange = (cartId, newQuantity) => {
     if (newQuantity <= 0) {
@@ -117,7 +117,10 @@ const Cart = () => {
                         </button>
                         <button
                           className="control-btn remove-btn"
-                          onClick={() => removeFromCart(item.cartId)}
+                          onClick={() => {
+                            removeFromCart(item.cartId);
+                            info(`Removed ${item.name} from cart`);
+                          }}
                           title="Remove from Cart"
                         >
                           <Trash2 size={18} />
