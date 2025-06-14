@@ -32,7 +32,7 @@ const Header = () => {
     <header className="header">
       <div className="header-container">
         {/* Logo */}
-        <Link to="/" className="logo">
+        <Link to="/" className="logo" style={{padding: 'inherit'}}>
           <span className="logo-text">SoleStore</span>
         </Link>
 

@@ -40,13 +40,13 @@ const Home = () => {
     },
     {
       name: 'Basketball',
-      image: '/images/category-basketball.jpg',
+      image: '/images/category-basketball.wevp',
       path: '/category/basketball',
       description: 'Court-ready shoes for peak performance'
     },
     {
       name: 'Casual',
-      image: '/images/category-casual.jpg',
+      image: '/images/category-casual.jpeg',
       path: '/category/casual',
       description: 'Everyday comfort and style'
     },
