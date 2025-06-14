@@ -21,12 +21,12 @@ export const shoesData = [
       "Foam midsole for lightweight comfort"
     ],
     images: [
-      "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=500&h=500&fit=crop",
-      "https://images.unsplash.com/photo-1549298916-b41d501d3772?w=500&h=500&fit=crop",
-      "https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?w=500&h=500&fit=crop",
-      "https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?w=500&h=500&fit=crop",
-      "https://images.unsplash.com/photo-1560769629-975ec94e6a86?w=500&h=500&fit=crop",
-      "https://images.unsplash.com/photo-1551107696-a4b0c5a0d9a2?w=500&h=500&fit=crop"
+      "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=500&h=500&fit=crop&auto=format",
+      "https://images.unsplash.com/photo-1549298916-b41d501d3772?w=500&h=500&fit=crop&auto=format",
+      "https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?w=500&h=500&fit=crop&auto=format",
+      "https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?w=500&h=500&fit=crop&auto=format",
+      "https://images.unsplash.com/photo-1560769629-975ec94e6a86?w=500&h=500&fit=crop&auto=format",
+      "https://images.unsplash.com/photo-1551107696-a4b0c5a0d9a2?w=500&h=500&fit=crop&auto=format"
     ],
     stock: 25,
     isNew: true,
@@ -51,12 +51,12 @@ export const shoesData = [
       "Torsion System for midfoot support"
     ],
     images: [
-      "https://images.unsplash.com/photo-1608231387042-66d1773070a5?w=500&h=500&fit=crop",
-      "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=500&h=500&fit=crop",
-      "https://images.unsplash.com/photo-1594969904906-c58ba4d2e3d0?w=500&h=500&fit=crop",
-      "https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?w=500&h=500&fit=crop",
-      "https://images.unsplash.com/photo-1539185441755-769473a23570?w=500&h=500&fit=crop",
-      "https://images.unsplash.com/photo-1574680096145-d05b474e2155?w=500&h=500&fit=crop"
+      "https://images.unsplash.com/photo-1608231387042-66d1773070a5?w=500&h=500&fit=crop&auto=format",
+      "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=500&h=500&fit=crop&auto=format",
+      "https://images.unsplash.com/photo-1594969904906-c58ba4d2e3d0?w=500&h=500&fit=crop&auto=format",
+      "https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?w=500&h=500&fit=crop&auto=format",
+      "https://images.unsplash.com/photo-1539185441755-769473a23570?w=500&h=500&fit=crop&auto=format",
+      "https://images.unsplash.com/photo-1574680096145-d05b474e2155?w=500&h=500&fit=crop&auto=format"
     ],
     stock: 18,
     isNew: false,

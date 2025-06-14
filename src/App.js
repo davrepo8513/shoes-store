@@ -12,6 +12,7 @@ import Search from './pages/Search/Search';
 import Brands from './pages/Brands/Brands';
 import Featured from './pages/Featured/Featured';
 import Profile from './pages/Profile/Profile';
+import Wishlist from './pages/Wishlist/Wishlist';
 import Footer from './components/Footer/Footer';
 import './App.css';
 
@@ -32,6 +33,7 @@ function App() {
                   <Route path="/search" element={<Search />} />
                   <Route path="/brands" element={<Brands />} />
                   <Route path="/featured" element={<Featured />} />
+                  <Route path="/wishlist" element={<Wishlist />} />
                   <Route path="/profile" element={<Profile />} />
                 </Routes>
               </main>

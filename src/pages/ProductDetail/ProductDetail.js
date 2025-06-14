@@ -48,6 +48,7 @@ const ProductDetail = () => {
           setShoe(shoeData);
           setSelectedSize(shoeData.sizes[0]);
           setSelectedColor(shoeData.colors[0]);
+          setIsLiked(isInWishlist(shoeData.id));
         }
       } catch (error) {
         console.error('Error loading shoe:', error);
@@ -57,7 +58,7 @@ const ProductDetail = () => {
     };
 
     loadShoe();
-  }, [id]);
+  }, [id, isInWishlist]);
 
   const handleAddToCart = () => {
     if (!selectedSize || !selectedColor) {
@@ -86,6 +87,18 @@ const ProductDetail = () => {
       window.location.href = '/cart';
     } catch (err) {
       error('Failed to add item to cart');
+    }
+  };
+
+  const handleWishlistToggle = () => {
+    if (isLiked) {
+      removeFromWishlist(shoe.id);
+      setIsLiked(false);
+      success(`Removed ${shoe.name} from wishlist`);
+    } else {
+      addToWishlist(shoe);
+      setIsLiked(true);
+      success(`Added ${shoe.name} to wishlist`);
     }
   };
 
@@ -217,7 +230,8 @@ const ProductDetail = () => {
               </div>
               <button 
                 className={`like-btn ${isLiked ? 'liked' : ''}`}
-                onClick={() => setIsLiked(!isLiked)}
+                onClick={handleWishlistToggle}
+                title={isLiked ? 'Remove from wishlist' : 'Add to wishlist'}
               >
                 <Heart size={24} fill={isLiked ? 'currentColor' : 'none'} />
               </button>

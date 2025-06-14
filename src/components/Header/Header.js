@@ -78,7 +78,7 @@ const Header = () => {
           <Link to="/profile" className="action-button" title="Profile">
             <User size={24} />
           </Link>
-          <Link to="/profile" className="action-button wishlist-button" title="Wishlist">
+          <Link to="/wishlist" className="action-button wishlist-button" title="Wishlist">
             <Heart size={24} />
             {getWishlistCount() > 0 && (
               <span className="wishlist-badge">{getWishlistCount()}</span>
