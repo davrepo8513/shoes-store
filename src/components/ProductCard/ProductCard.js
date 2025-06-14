@@ -12,6 +12,7 @@ const ProductCard = ({ shoe }) => {
   const { addToCart } = useCart();
   const { addToWishlist, removeFromWishlist, isInWishlist } = useWishlist();
   const { success } = useToast();
+  const { setIsLiked } = useState(false);
   
   const isLiked = isInWishlist(shoe.id);
 
