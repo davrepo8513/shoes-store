@@ -27,8 +27,8 @@
 /* Product Image */
 .product-image {
   position: relative;
-  width: 200px;
-  height: 200px;
+  width: auto;
+  height: auto;
   flex-shrink: 0;
   border-radius: 12px;
   overflow: hidden;
