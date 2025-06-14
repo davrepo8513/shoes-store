@@ -40,7 +40,7 @@ const Home = () => {
     },
     {
       name: 'Basketball',
-      image: '/images/category-basketball.wevp',
+      image: '/images/category-basketball.webp',
       path: '/category/basketball',
       description: 'Court-ready shoes for peak performance'
     },
