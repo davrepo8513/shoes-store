@@ -13,10 +13,16 @@ import {
   CreditCard
 } from 'lucide-react';
 import { useToast } from '../../components/Toast/Toast';
+import { useWishlist } from '../../context/WishlistContext';
+import { useCart } from '../../context/CartContext';
+import { Link } from 'react-router-dom';
+import { ShoppingCart, Trash2 } from 'lucide-react';
 import './Profile.css';
 
 const Profile = () => {
   const { success } = useToast();
+  const { items: wishlistItems, removeFromWishlist } = useWishlist();
+  const { addToCart } = useCart();
   const [activeTab, setActiveTab] = useState('profile');
   const [isEditing, setIsEditing] = useState(false);
   const [profile, setProfile] = useState({
@@ -211,17 +217,73 @@ const Profile = () => {
     </div>
   );
 
+  const handleAddToCartFromWishlist = (item) => {
+    try {
+      addToCart(item, item.sizes[0], item.colors[0], 1);
+      success(`Added ${item.name} to cart!`);
+    } catch (error) {
+      console.error('Error adding to cart:', error);
+    }
+  };
+
+  const handleRemoveFromWishlist = (itemId, itemName) => {
+    removeFromWishlist(itemId);
+    success(`Removed ${itemName} from wishlist`);
+  };
+
   const renderWishlistTab = () => (
     <div className="wishlist-content">
       <div className="wishlist-header">
         <h3>My Wishlist</h3>
-        <p>Items you've saved for later</p>
+        <p>Items you've saved for later ({wishlistItems.length} items)</p>
       </div>
-      <div className="empty-state">
-        <Heart size={64} className="empty-icon" />
-        <h4>Your wishlist is empty</h4>
-        <p>Start adding items to your wishlist by clicking the heart icon on products.</p>
-      </div>
+      
+      {wishlistItems.length === 0 ? (
+        <div className="empty-state">
+          <Heart size={64} className="empty-icon" />
+          <h4>Your wishlist is empty</h4>
+          <p>Start adding items to your wishlist by clicking the heart icon on products.</p>
+          <Link to="/" className="browse-products-btn">Browse Products</Link>
+        </div>
+      ) : (
+        <div className="wishlist-grid">
+          {wishlistItems.map((item) => (
+            <div key={item.id} className="wishlist-item">
+              <Link to={`/product/${item.id}`} className="wishlist-item-link">
+                <div className="wishlist-item-image">
+                  <img src={item.images[0]} alt={item.name} />
+                </div>
+                <div className="wishlist-item-info">
+                  <div className="wishlist-item-brand">{item.brand}</div>
+                  <div className="wishlist-item-name">{item.name}</div>
+                  <div className="wishlist-item-price">
+                    <span className="current-price">${item.price}</span>
+                    {item.originalPrice > item.price && (
+                      <span className="original-price">${item.originalPrice}</span>
+                    )}
+                  </div>
+                </div>
+              </Link>
+              <div className="wishlist-item-actions">
+                <button
+                  className="wishlist-action-btn add-to-cart-btn"
+                  onClick={() => handleAddToCartFromWishlist(item)}
+                  title="Add to Cart"
+                >
+                  <ShoppingCart size={16} />
+                </button>
+                <button
+                  className="wishlist-action-btn remove-btn"
+                  onClick={() => handleRemoveFromWishlist(item.id, item.name)}
+                  title="Remove from Wishlist"
+                >
+                  <Trash2 size={16} />
+                </button>
+              </div>
+            </div>
+          ))}
+        </div>
+      )}
     </div>
   );
 

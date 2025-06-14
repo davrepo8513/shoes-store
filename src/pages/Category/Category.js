@@ -4,6 +4,7 @@ import { Filter, Grid, List, ChevronDown, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { getShoesByCategory, getShoes } from '../../utils/database';
 import ProductCard from '../../components/ProductCard/ProductCard';
+import ProductListItem from '../../components/ProductListItem/ProductListItem';
 import './Category.css';
 
 const Category = () => {
@@ -346,17 +347,34 @@ const Category = () => {
                 </button>
               </div>
             ) : (
-              <div className={`products-grid ${viewMode}`}>
-                {filteredShoes.map((shoe, index) => (
-                  <motion.div
-                    key={shoe.id}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: index * 0.05 }}
-                  >
-                    <ProductCard shoe={shoe} />
-                  </motion.div>
-                ))}
+              <div className={`products-container ${viewMode}`}>
+                {viewMode === 'grid' ? (
+                  <div className="products-grid">
+                    {filteredShoes.map((shoe, index) => (
+                      <motion.div
+                        key={shoe.id}
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: index * 0.05 }}
+                      >
+                        <ProductCard shoe={shoe} />
+                      </motion.div>
+                    ))}
+                  </div>
+                ) : (
+                  <div className="products-list">
+                    {filteredShoes.map((shoe, index) => (
+                      <motion.div
+                        key={shoe.id}
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: index * 0.05 }}
+                      >
+                        <ProductListItem shoe={shoe} />
+                      </motion.div>
+                    ))}
+                  </div>
+                )}
               </div>
             )}
           </div>

@@ -17,6 +17,7 @@ import {
 import { motion, AnimatePresence } from 'framer-motion';
 import { getShoeById } from '../../utils/database';
 import { useCart } from '../../context/CartContext';
+import { useWishlist } from '../../context/WishlistContext';
 import { useToast } from '../../components/Toast/Toast';
 
 import './ProductDetail.css';
@@ -24,6 +25,7 @@ import './ProductDetail.css';
 const ProductDetail = () => {
   const { id } = useParams();
   const { addToCart } = useCart();
+  const { addToWishlist, removeFromWishlist, isInWishlist } = useWishlist();
   const { success, error } = useToast();
   
   const [shoe, setShoe] = useState(null);
