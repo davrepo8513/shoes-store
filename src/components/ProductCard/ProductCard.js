@@ -3,12 +3,17 @@ import { Link } from 'react-router-dom';
 import { Heart, ShoppingCart, Star, Eye, Zap } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { useCart } from '../../context/CartContext';
+import { useWishlist } from '../../context/WishlistContext';
+import { useToast } from '../Toast/Toast';
 import './ProductCard.css';
 
 const ProductCard = ({ shoe }) => {
-  const [isLiked, setIsLiked] = useState(false);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const { addToCart } = useCart();
+  const { addToWishlist, removeFromWishlist, isInWishlist } = useWishlist();
+  const { success } = useToast();
+  
+  const isLiked = isInWishlist(shoe.id);
 
   const handleAddToCart = (e) => {
     e.preventDefault();

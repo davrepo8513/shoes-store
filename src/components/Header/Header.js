@@ -2,12 +2,14 @@ import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { Search, ShoppingCart, Menu, X, User, Heart } from 'lucide-react';
 import { useCart } from '../../context/CartContext';
+import { useWishlist } from '../../context/WishlistContext';
 import './Header.css';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
   const { getCartItemsCount } = useCart();
+  const { getWishlistCount } = useWishlist();
   const navigate = useNavigate();
 
   const handleSearch = (e) => {
@@ -73,13 +75,16 @@ const Header = () => {
 
         {/* Header Actions */}
         <div className="header-actions">
-          <button className="action-button">
+          <Link to="/profile" className="action-button" title="Profile">
             <User size={24} />
-          </button>
-          <button className="action-button">
+          </Link>
+          <Link to="/profile" className="action-button wishlist-button" title="Wishlist">
             <Heart size={24} />
-          </button>
-          <Link to="/cart" className="action-button cart-button">
+            {getWishlistCount() > 0 && (
+              <span className="wishlist-badge">{getWishlistCount()}</span>
+            )}
+          </Link>
+          <Link to="/cart" className="action-button cart-button" title="Shopping Cart">
             <ShoppingCart size={24} />
             {getCartItemsCount() > 0 && (
               <span className="cart-badge">{getCartItemsCount()}</span>
