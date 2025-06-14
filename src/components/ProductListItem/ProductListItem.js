@@ -1,4 +1,3 @@
-import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Heart, ShoppingCart, Star, Eye } from 'lucide-react';
 import { motion } from 'framer-motion';
