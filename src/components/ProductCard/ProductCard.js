@@ -12,7 +12,6 @@ const ProductCard = ({ shoe }) => {
   const { addToCart } = useCart();
   const { addToWishlist, removeFromWishlist, isInWishlist } = useWishlist();
   const { success } = useToast();
-  const { setIsLiked } = useState(false);
   
   const isLiked = isInWishlist(shoe.id);
 
@@ -33,7 +32,14 @@ const ProductCard = ({ shoe }) => {
   const handleLike = (e) => {
     e.preventDefault();
     e.stopPropagation();
-    setIsLiked(!isLiked);
+    
+    if (isLiked) {
+      removeFromWishlist(shoe.id);
+      success(`Removed ${shoe.name} from wishlist`);
+    } else {
+      addToWishlist(shoe);
+      success(`Added ${shoe.name} to wishlist`);
+    }
   };
 
   const handleImageHover = (index) => {

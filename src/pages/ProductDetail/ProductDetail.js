@@ -71,6 +71,22 @@ const ProductDetail = () => {
     }
   };
 
+  const handleBuyNow = () => {
+    if (!selectedSize || !selectedColor) {
+      error('Please select size and color');
+      return;
+    }
+    
+    try {
+      addToCart(shoe, selectedSize, selectedColor, quantity);
+      success(`Added ${quantity} ${shoe.name} to cart!`);
+      // Navigate to cart for immediate checkout
+      window.location.href = '/cart';
+    } catch (err) {
+      error('Failed to add item to cart');
+    }
+  };
+
   const handle360View = () => {
     setIs360View(!is360View);
     setRotation(0);
@@ -325,7 +341,7 @@ const ProductDetail = () => {
                 <ShoppingCart size={20} />
                 Add to Cart - ${(shoe.price * quantity).toFixed(2)}
               </button>
-              <button className="buy-now-btn">
+              <button className="buy-now-btn" onClick={handleBuyNow}>
                 Buy Now
               </button>
             </div>

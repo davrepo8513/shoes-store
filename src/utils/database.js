@@ -120,7 +120,7 @@ export const shoesData = [
     ],
     stock: 45,
     isNew: false,
-    isFeatured: false
+    isFeatured: true
   },
   {
     id: 5,
@@ -149,8 +149,8 @@ export const shoesData = [
       "https://images.unsplash.com/photo-1539185441755-769473a23570?w=500&h=500&fit=crop"
     ],
     stock: 30,
-    isNew: false,
-    isFeatured: false
+    isNew: true,
+    isFeatured: true
   },
   {
     id: 6,

@@ -2,15 +2,11 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { 
   User, 
-  Mail, 
-  Phone, 
-  MapPin, 
   Edit3, 
   Save, 
   X, 
   Heart,
   ShoppingBag,
-  Clock,
   Settings,
   Bell,
   Shield,
@@ -20,7 +16,7 @@ import { useToast } from '../../components/Toast/Toast';
 import './Profile.css';
 
 const Profile = () => {
-  const { success, error } = useToast();
+  const { success } = useToast();
   const [activeTab, setActiveTab] = useState('profile');
   const [isEditing, setIsEditing] = useState(false);
   const [profile, setProfile] = useState({
