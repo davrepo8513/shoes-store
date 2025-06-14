@@ -39,7 +39,7 @@ const Search = () => {
       setQuery(searchQuery);
       performSearch(searchQuery);
     }
-  }, [searchParams]);
+  }, [searchParams]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const performSearch = async (searchQuery) => {
     if (!searchQuery.trim()) {

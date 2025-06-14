@@ -21,12 +21,12 @@ export const shoesData = [
       "Foam midsole for lightweight comfort"
     ],
     images: [
-      "/images/nike-air-max-270-1.jpg",
-      "/images/nike-air-max-270-2.jpg",
-      "/images/nike-air-max-270-3.jpg",
-      "/images/nike-air-max-270-4.jpg",
-      "/images/nike-air-max-270-5.jpg",
-      "/images/nike-air-max-270-6.jpg"
+      "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=500&h=500&fit=crop",
+      "https://images.unsplash.com/photo-1549298916-b41d501d3772?w=500&h=500&fit=crop",
+      "https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?w=500&h=500&fit=crop",
+      "https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?w=500&h=500&fit=crop",
+      "https://images.unsplash.com/photo-1560769629-975ec94e6a86?w=500&h=500&fit=crop",
+      "https://images.unsplash.com/photo-1551107696-a4b0c5a0d9a2?w=500&h=500&fit=crop"
     ],
     stock: 25,
     isNew: true,
@@ -51,12 +51,12 @@ export const shoesData = [
       "Torsion System for midfoot support"
     ],
     images: [
-      "/images/adidas-ultraboost-22-1.jpg",
-      "/images/adidas-ultraboost-22-2.jpg",
-      "/images/adidas-ultraboost-22-3.jpg",
-      "/images/adidas-ultraboost-22-4.jpg",
-      "/images/adidas-ultraboost-22-5.jpg",
-      "/images/adidas-ultraboost-22-6.jpg"
+      "https://images.unsplash.com/photo-1608231387042-66d1773070a5?w=500&h=500&fit=crop",
+      "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=500&h=500&fit=crop",
+      "https://images.unsplash.com/photo-1594969904906-c58ba4d2e3d0?w=500&h=500&fit=crop",
+      "https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?w=500&h=500&fit=crop",
+      "https://images.unsplash.com/photo-1539185441755-769473a23570?w=500&h=500&fit=crop",
+      "https://images.unsplash.com/photo-1574680096145-d05b474e2155?w=500&h=500&fit=crop"
     ],
     stock: 18,
     isNew: false,
@@ -81,12 +81,12 @@ export const shoesData = [
       "Classic high-top silhouette"
     ],
     images: [
-      "/images/jordan-1-retro-high-1.jpg",
-      "/images/jordan-1-retro-high-2.jpg",
-      "/images/jordan-1-retro-high-3.jpg",
-      "/images/jordan-1-retro-high-4.jpg",
-      "/images/jordan-1-retro-high-5.jpg",
-      "/images/jordan-1-retro-high-6.jpg"
+      "https://images.unsplash.com/photo-1556906781-9a412961c28c?w=500&h=500&fit=crop",
+      "https://images.unsplash.com/photo-1552346154-21d32810aba3?w=500&h=500&fit=crop",
+      "https://images.unsplash.com/photo-1607522370275-f14206abe5d3?w=500&h=500&fit=crop",
+      "https://images.unsplash.com/photo-1584464491033-06628f3a6b7b?w=500&h=500&fit=crop",
+      "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=500&h=500&fit=crop",
+      "https://images.unsplash.com/photo-1605348532760-6753d2c43329?w=500&h=500&fit=crop"
     ],
     stock: 12,
     isNew: false,
@@ -111,12 +111,12 @@ export const shoesData = [
       "Classic All Star patch"
     ],
     images: [
-      "/images/converse-chuck-taylor-1.jpg",
-      "/images/converse-chuck-taylor-2.jpg",
-      "/images/converse-chuck-taylor-3.jpg",
-      "/images/converse-chuck-taylor-4.jpg",
-      "/images/converse-chuck-taylor-5.jpg",
-      "/images/converse-chuck-taylor-6.jpg"
+      "https://images.unsplash.com/photo-1607522370275-f14206abe5d3?w=500&h=500&fit=crop",
+      "https://images.unsplash.com/photo-1549298916-b41d501d3772?w=500&h=500&fit=crop",
+      "https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?w=500&h=500&fit=crop",
+      "https://images.unsplash.com/photo-1560769629-975ec94e6a86?w=500&h=500&fit=crop",
+      "https://images.unsplash.com/photo-1551107696-a4b0c5a0d9a2?w=500&h=500&fit=crop",
+      "https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?w=500&h=500&fit=crop"
     ],
     stock: 45,
     isNew: false,
@@ -141,12 +141,12 @@ export const shoesData = [
       "Signature rubber waffle outsole"
     ],
     images: [
-      "/images/vans-old-skool-1.jpg",
-      "/images/vans-old-skool-2.jpg",
-      "/images/vans-old-skool-3.jpg",
-      "/images/vans-old-skool-4.jpg",
-      "/images/vans-old-skool-5.jpg",
-      "/images/vans-old-skool-6.jpg"
+      "https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?w=500&h=500&fit=crop",
+      "https://images.unsplash.com/photo-1544966503-7cc5ac882d5f?w=500&h=500&fit=crop",
+      "https://images.unsplash.com/photo-1520256862855-398228c41684?w=500&h=500&fit=crop",
+      "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=500&h=500&fit=crop",
+      "https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?w=500&h=500&fit=crop",
+      "https://images.unsplash.com/photo-1539185441755-769473a23570?w=500&h=500&fit=crop"
     ],
     stock: 30,
     isNew: false,
@@ -171,12 +171,12 @@ export const shoesData = [
       "Made in USA"
     ],
     images: [
-      "/images/new-balance-990v5-1.jpg",
-      "/images/new-balance-990v5-2.jpg",
-      "/images/new-balance-990v5-3.jpg",
-      "/images/new-balance-990v5-4.jpg",
-      "/images/new-balance-990v5-5.jpg",
-      "/images/new-balance-990v5-6.jpg"
+      "https://images.unsplash.com/photo-1608231387042-66d1773070a5?w=500&h=500&fit=crop",
+      "https://images.unsplash.com/photo-1594969904906-c58ba4d2e3d0?w=500&h=500&fit=crop",
+      "https://images.unsplash.com/photo-1574680096145-d05b474e2155?w=500&h=500&fit=crop",
+      "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=500&h=500&fit=crop",
+      "https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?w=500&h=500&fit=crop",
+      "https://images.unsplash.com/photo-1560769629-975ec94e6a86?w=500&h=500&fit=crop"
     ],
     stock: 15,
     isNew: true,
@@ -201,12 +201,12 @@ export const shoesData = [
       "Bold retro design"
     ],
     images: [
-      "/images/puma-rs-x-1.jpg",
-      "/images/puma-rs-x-2.jpg",
-      "/images/puma-rs-x-3.jpg",
-      "/images/puma-rs-x-4.jpg",
-      "/images/puma-rs-x-5.jpg",
-      "/images/puma-rs-x-6.jpg"
+      "https://images.unsplash.com/photo-1551107696-a4b0c5a0d9a2?w=500&h=500&fit=crop",
+      "https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?w=500&h=500&fit=crop",
+      "https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?w=500&h=500&fit=crop",
+      "https://images.unsplash.com/photo-1544966503-7cc5ac882d5f?w=500&h=500&fit=crop",
+      "https://images.unsplash.com/photo-1520256862855-398228c41684?w=500&h=500&fit=crop",
+      "https://images.unsplash.com/photo-1539185441755-769473a23570?w=500&h=500&fit=crop"
     ],
     stock: 22,
     isNew: false,
@@ -231,12 +231,12 @@ export const shoesData = [
       "Classic design"
     ],
     images: [
-      "/images/reebok-classic-leather-1.jpg",
-      "/images/reebok-classic-leather-2.jpg",
-      "/images/reebok-classic-leather-3.jpg",
-      "/images/reebok-classic-leather-4.jpg",
-      "/images/reebok-classic-leather-5.jpg",
-      "/images/reebok-classic-leather-6.jpg"
+      "https://images.unsplash.com/photo-1549298916-b41d501d3772?w=500&h=500&fit=crop",
+      "https://images.unsplash.com/photo-1607522370275-f14206abe5d3?w=500&h=500&fit=crop",
+      "https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?w=500&h=500&fit=crop",
+      "https://images.unsplash.com/photo-1560769629-975ec94e6a86?w=500&h=500&fit=crop",
+      "https://images.unsplash.com/photo-1551107696-a4b0c5a0d9a2?w=500&h=500&fit=crop",
+      "https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?w=500&h=500&fit=crop"
     ],
     stock: 35,
     isNew: false,

@@ -17,12 +17,14 @@ import {
 import { motion, AnimatePresence } from 'framer-motion';
 import { getShoeById } from '../../utils/database';
 import { useCart } from '../../context/CartContext';
-import ProductCard from '../../components/ProductCard/ProductCard';
+import { useToast } from '../../components/Toast/Toast';
+
 import './ProductDetail.css';
 
 const ProductDetail = () => {
   const { id } = useParams();
   const { addToCart } = useCart();
+  const { success, error } = useToast();
   
   const [shoe, setShoe] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -57,13 +59,16 @@ const ProductDetail = () => {
 
   const handleAddToCart = () => {
     if (!selectedSize || !selectedColor) {
-      alert('Please select size and color');
+      error('Please select size and color');
       return;
     }
     
-    addToCart(shoe, selectedSize, selectedColor, quantity);
-    // Show success message (implement toast notification)
-    console.log(`Added ${quantity} ${shoe.name} to cart`);
+    try {
+      addToCart(shoe, selectedSize, selectedColor, quantity);
+      success(`Added ${quantity} ${shoe.name} to cart!`);
+    } catch (err) {
+      error('Failed to add item to cart');
+    }
   };
 
   const handle360View = () => {

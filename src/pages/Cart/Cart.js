@@ -3,10 +3,12 @@ import { Link } from 'react-router-dom';
 import { Trash2, Plus, Minus, ShoppingBag, ArrowLeft, Heart } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useCart } from '../../context/CartContext';
+import { useToast } from '../../components/Toast/Toast';
 import './Cart.css';
 
 const Cart = () => {
   const { items, removeFromCart, updateQuantity, getCartTotal, clearCart } = useCart();
+  const { success, info } = useToast();
 
   const handleQuantityChange = (cartId, newQuantity) => {
     if (newQuantity <= 0) {
@@ -132,7 +134,10 @@ const Cart = () => {
                 <ArrowLeft size={20} />
                 Continue Shopping
               </Link>
-              <button className="clear-cart-btn" onClick={clearCart}>
+              <button className="clear-cart-btn" onClick={() => {
+                clearCart();
+                info('Cart cleared');
+              }}>
                 Clear Cart
               </button>
             </div>

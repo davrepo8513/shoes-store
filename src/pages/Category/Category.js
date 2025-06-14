@@ -46,7 +46,7 @@ const Category = () => {
 
   useEffect(() => {
     applyFiltersAndSort();
-  }, [shoes, filters, sortBy]);
+  }, [shoes, filters, sortBy]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const applyFiltersAndSort = () => {
     let filtered = [...shoes];
